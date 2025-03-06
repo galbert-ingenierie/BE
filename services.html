@@ -6,6 +6,47 @@
     <meta name="description" content="Services offerts par GALBERT INGÉNIERIE en génie civil, géotechnique et infrastructures routières.">
     <title>Services - GALBERT INGÉNIERIE</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .services {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .services p {
+            color: #555;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .services ul li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .services ul li strong {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,27 +55,52 @@
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="recruitment.html">Recrutement</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="services">
-        <h1>Nos Services</h1>
-        <p>Nous proposons des solutions complètes en génie civil et géotechnique, adaptées à tous vos projets d'infrastructure. Nos services couvrent la conception, la gestion et la supervision de projets complexes.</p>
-
-        <ul>
-            <li><strong>Génie civil et infrastructures routières</strong>: Conception, gestion et optimisation de projets d'infrastructure.</li>
-            <li><strong>Géotechnique</strong>: Études approfondies et solutions géotechniques personnalisées.</li>
-            <li><strong>Bâtiments</strong>: Conception et supervision de projets de construction durable.</li>
-            <li><strong>Consultation</strong>: Expertise et conseils techniques pour la gestion des projets.</li>
-        </ul>
+    <section class="hero">
+            <div class="hero-content">
+            <h1>Nos Services</h1>
+            <p>Nous proposons des solutions complètes en génie civil et géotechnique, adaptées à tous vos projets d'infrastructure. Nos services couvrent la conception, la gestion et la supervision de projets complexes.</p>
     </section>
+
+    <!-- Nos services -->
+    <section class="services-overview">
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Génie civil</h3>
+                    <p>Nous nous spécialisons dans la conception et la gestion de projets d'infrastructure, allant de la planification à la mise en œuvre. Avec une approche centrée sur l'efficacité et la durabilité, nous transformons les idées en structures solides qui soutiennent l'avenir de la société.</p>
+                </div>
+                <div class="card">
+                    <h3>Bâtiments</h3>
+                    <p>Nous créons des bâtiments modernes et fonctionnels qui répondent aux besoins actuels tout en respectant les normes environnementales. Chaque projet est conçu pour durer, en mettant l'accent sur la qualité, la sécurité et l'impact environnemental.</p>
+                </div>
+                <div class="card">
+                    <h3>Ouvrages d'art</h3>
+                    <p>Des ponts aux viaducs, nos projets d'ouvrages d'art sont conçus pour résister au temps et aux conditions extrêmes. Nous mettons en œuvre des solutions techniques de pointe pour garantir leur longévité et leur sécurité.</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Appel à l'action -->
+    <section class="cta">
+            <h2>Prêt à démarrer votre projet ?</h2>
+            <p>Contactez-nous pour discuter de vos besoins et commencer à travailler ensemble sur des projets d'infrastructure durables en Haïti.</p>
+            <a href="contact.html" class="button">Nous contacter</a>
+        </section>
 
     <footer>
         <p>&copy; 2025 GALBERT INGÉNIERIE | Tous droits réservés</p>
+        <nav>
+            <ul>
+                <li><a href="privacy.html" target="_blank">Politique de confidentialité</a></li>
+                <li><a href="terms.html" target="_blank">Conditions d'utilisation</a></li>
+            </ul>
+        </nav>
     </footer>
 
 </body>

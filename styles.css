@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-    scroll-behavior: smooth; /* Ajoute un défilement fluide */
+    scroll-behavior: smooth;
 }
 
 /* Variables CSS pour les couleurs et polices */
@@ -67,26 +67,42 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 
-/* HOME SECTION */
-.home {
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    color: var(--white);
-    padding: 80px 20px;
-    text-align: center;
+/* MAIN CONTENT */
+main {
     flex: 1;
+    padding: 20px;
 }
 
-.home h1 {
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(45deg, #3498db, #2ecc71); /* Dégradé de bleu à vert */
+    color: white;
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hero h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.home p {
+.hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
 
-.home a {
+.hero .button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 12px 25px;
@@ -96,71 +112,112 @@ header nav ul li a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.home a:hover {
+.hero .button:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-/* SECTION (ABOUT, SERVICES, CONTACT, RECRUITMENT) */
-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
+/* INTRODUCTION SECTION */
+.intro {
+    background-color: var(--white);
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
 }
 
-section h1 {
-    font-size: 2em;
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.intro h2 {
     color: var(--primary-color);
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-section p {
+.intro p {
+    color: var(--text-color);
     font-size: 1.1em;
-    margin-bottom: 25px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-section ul {
-    list-style: none;
-    padding: 0;
+.intro .button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.intro .button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* NOS OFFRES SECTION - Ajout d'animations */
+.recruitment ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    padding: 0;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
 }
 
-section ul li {
+.recruitment ul li {
     background-color: var(--white);
     padding: 20px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.recruitment ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.recruitment ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.recruitment h3 {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recruitment p {
+    color: var(--text-color);
     font-size: 1.1em;
-    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
 }
 
-section ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* BUTTON */
-button, a.button {
+.recruitment .button {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 12px 20px;
-    font-size: 1.1em;
+    padding: 10px 20px;
+    font-size: 1em;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s, color 0.3s;
-    border: none;
-    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button:hover, a.button:hover {
+.recruitment .button:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
@@ -172,44 +229,127 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 1em;
-    margin-top: auto; /* Pour coller le footer en bas */
+    margin-top: auto;
 }
 
 footer p {
     font-size: 0.9em;
 }
 
-/* FORM (Contact) */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 20px auto;
-    gap: 15px;
+/* Section avec cadre */
+.section-box {
+    background-color: #f4f4f4; /* Couleur de fond pour le cadre */
+    border: 2px solid #ccc;    /* Bordure légère autour du cadre */
+    padding: 20px;              /* Espacement interne pour aérer le contenu */
+    margin-top: 20px;           /* Espacement en haut pour séparer des autres sections */
+    border-radius: 10px;        /* Coins arrondis */
 }
 
-form input, form textarea {
-    padding: 12px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
+ul {
+    list-style-type: none;
+    padding-left: 0; /* Pour enlever le retrait à gauche */
 }
 
-form input:focus, form textarea:focus {
-    border-color: var(--primary-color);
-}
-
-form input[type="submit"] {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form input[type="submit"]:hover {
+/* CALL TO ACTION SECTION */
+.cta {
     background-color: var(--primary-color);
     color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 900px;
 }
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta .button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta .button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+/* SERVICES OVERVIEW SECTION */
+.services-overview {
+    background-color: var(--white);
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.services-overview h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-cards .card {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-cards .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.service-cards .card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.service-cards .card p {
+    color: var(--text-color);
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.service-cards .card .button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: 0.9em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-cards .card .button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
