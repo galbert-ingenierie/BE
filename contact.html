@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page de contact de GALBERT INGÉNIERIE">
+    <title>Contact - GALBERT INGÉNIERIE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contactez-nous</h1>
+        <p>Pour toute demande de renseignement ou de devis, veuillez nous contacter via le formulaire ci-dessous ou en envoyant un email directement à <a href="mailto:contact@galbert-ingenierie.com">contact@galbert-ingenierie.com</a>.</p>
+
+        <form action="mailto:contact@galbert-ingenierie.com" method="post" enctype="text/plain">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Objet :</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GALBERT INGÉNIERIE | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
