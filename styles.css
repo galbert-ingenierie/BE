@@ -10,6 +10,13 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* Meta tag viewport pour mobile */
+@media only screen and (max-width: 600px) {
+    meta[name="viewport"] {
+        content: "width=device-width, initial-scale=1.0";
+    }
+}
+
 /* Variables CSS pour les couleurs et polices */
 :root {
     --primary-color: #003366;
@@ -29,6 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    padding: 0 10px; /* Ajout de padding pour mieux gérer les espaces sur mobile */
 }
 
 /* HEADER */
@@ -285,6 +293,7 @@ ul {
     background-color: var(--white);
     color: var(--primary-color);
 }
+
 /* SERVICES OVERVIEW SECTION */
 .services-overview {
     background-color: var(--white);
@@ -353,3 +362,29 @@ ul {
     color: var(--primary-color);
 }
 
+/* Responsivité */
+@media only screen and (max-width: 768px) {
+    .hero, .intro, .cta, .services-overview {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .recruitment ul {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
