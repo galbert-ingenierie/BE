@@ -388,3 +388,188 @@ ul {
         margin: 10px 0;
     }
 }
+/* MEDIA QUERIES POUR RÉACTIVITÉ */
+
+@media (max-width: 768px) {
+    /* Ajustements pour les écrans plus petits (tablettes et moins) */
+    .hero {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .intro {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .recruitment ul {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        width: 90%;
+        padding: 30px 10px;
+    }
+
+    .services-overview {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajustement des polices pour les petits écrans */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .intro h2 {
+        font-size: 1.5em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .recruitment h3 {
+        font-size: 1.3em;
+    }
+
+    .recruitment p {
+        font-size: 1em;
+    }
+
+    .cta h2 {
+        font-size: 1.8em;
+    }
+
+    .cta p {
+        font-size: 1em;
+    }
+
+    .services-overview h2 {
+        font-size: 1.5em;
+    }
+
+    .service-cards .card {
+        padding: 15px;
+    }
+}
+
+/* Pour les très petits écrans (moins de 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .intro h2 {
+        font-size: 1.4em;
+    }
+
+    .intro p {
+        font-size: 0.9em;
+    }
+
+    .recruitment h3 {
+        font-size: 1.2em;
+    }
+
+    .recruitment p {
+        font-size: 0.9em;
+    }
+
+    .cta h2 {
+        font-size: 1.6em;
+    }
+
+    .cta p {
+        font-size: 0.9em;
+    }
+
+    .services-overview h2 {
+        font-size: 1.3em;
+    }
+}
+.project-preview {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-description {
+    text-align: left;
+}
+
+.project-summary {
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+.project-feature {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.project-main-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.project-details {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.project-details p {
+    margin: 10px 0;
+}
+
+.project-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project-plan {
+    margin-top: 30px;
+}
+
+.project-plan-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
